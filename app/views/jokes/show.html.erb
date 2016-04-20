@@ -1,0 +1,15 @@
+<p><%= @joke.prompt %></p>
+<br><br>
+<button onclick = "tellJoke()">I dunno!</button>
+<br><br>
+<p id = "pun"></p>
+
+
+<script>
+  var x = "<%= @joke.punchline %>";
+  function tellJoke() {
+  document.getElementById("pun").innerHTML = x;
+  }
+</script>
+
+
