@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420150809) do
+ActiveRecord::Schema.define(version: 20160421170501) do
 
   create_table "jokes", force: :cascade do |t|
     t.string   "prompt"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20160420150809) do
     t.datetime "updated_at", null: false
     t.string   "laugh"
   end
+
+  create_table "microposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
