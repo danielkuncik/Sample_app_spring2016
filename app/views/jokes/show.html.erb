@@ -3,12 +3,15 @@
 <button onclick = "tellJoke()">I dunno!</button>
 <br><br>
 <p id = "pun"></p>
+<p id = "am_i_funny"></p>
 
 
 <script>
   var x = "<%= @joke.punchline %>";
+  var y = "<%= @joke.laugh %>";
   function tellJoke() {
   document.getElementById("pun").innerHTML = x;
+  document.getElementById("am_i_funny").innerHTML = y;
   }
 </script>
 
