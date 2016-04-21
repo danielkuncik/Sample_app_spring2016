@@ -1,0 +1,8 @@
+<p>Hello its me</p>
+<p><%= @question.content %></p>
+<p><%= @question.answers.count %></p>
+
+<% if @question.answers.any? %>
+  <%= render @answers %>
+  <p>I was wondering if after all these years youd like to meet.</p>
+<% end %>

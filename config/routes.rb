@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   
   resources :users
   resources :jokes
+  resources :questions
+  
+##  get    'question' => 'questions#show'
   
     
   #get    'jokes/new'
