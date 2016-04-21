@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   get    'contact' => 'static_pages#contact'
   
+  get    'form'    => 'static_pages#form_test'
+  
   get    'signup'  => 'users#new'
   
   get    'login'   => 'session#new'

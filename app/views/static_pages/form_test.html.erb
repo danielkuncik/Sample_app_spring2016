@@ -1,0 +1,9 @@
+<p>Hello its me</p>
+
+<%= form_tag do %>
+  <%= radio_button_tag(:fandom, "fan") %>
+  <%= label_tag(:pats_fan, "I am a Patriots fan") %>
+  <%= radio_button_tag(:fandom, "suck") %>
+  <%= label_tag(:such, "I suck") %>
+  <%= submit_tag("Answer") %>
+<% end %>
