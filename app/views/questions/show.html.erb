@@ -1,8 +1,16 @@
-<p>Hello its me</p>
 <p><%= @question.content %></p>
-<p><%= @question.answers.count %></p>
+<p><%= session[:quiz_grade] %></p>
+<p><%= session[:answer] %></p>
 
-<% if @question.answers.any? %>
-  <%= render @answers %>
-  <p>I was wondering if after all these years youd like to meet.</p>
+
+<% y = @question.answers.first.id %>
+
+<%= form_tag do %>
+<% x = y %>
+<% while x < (@question.answers.count + y) %>
+<%= radio_button_tag(:president, @question.answers.find(x).correct) %>
+<%= label_tag(:president, @question.answers.find(x).content) %>
+<% x += 1 %>
+<% end %>
+<%= submit_tag("answer_question") %>
 <% end %>

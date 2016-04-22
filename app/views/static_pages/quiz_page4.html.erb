@@ -1,0 +1,18 @@
+<p>i'm in california dreaming about who we used to be</p>
+<p><%= session[:user_id] %></p>
+<p><%= session[:quiz_grade] %></p>
+<p><%= session[:color] %></p>
+<p><%= session[:answer] %></p>
+
+<p>Which is not a color in the American Flag?</p>
+<%= form_tag do %>
+<%= radio_button_tag(:color, "wrong1") %>
+<%= label_tag(:color_wrong1, "RED") %>
+<%= radio_button_tag(:color, "wrong2") %>
+<%= label_tag(:color_wrong2, "WHITE") %>
+<%= radio_button_tag(:color, "wrong3")  %>
+<%= label_tag(:color_wrong3, "BLUE") %>
+<%= radio_button_tag(:color, "correct") %>
+<%= label_tag(:color_correct, "PURPLE") %>
+<%= submit_tag("change_color") %>
+<% end %>

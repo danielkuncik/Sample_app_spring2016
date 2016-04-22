@@ -1,0 +1,10 @@
+<% provide(:title, "New Quiz") %>
+<p>Hello its me.</p>
+<h1>New Quiz</h1>
+
+<%= form_for(:attempt, url: newquiz_path) do |f| %>
+Form contents
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit "New Quiz", class: "btn btn-primary" %>
+<% end %>

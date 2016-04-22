@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'attempts/new'
+
   root   'static_pages#home'
 
   get    'help'    => 'static_pages#help'
@@ -19,7 +21,25 @@ Rails.application.routes.draw do
   
   resources :users
   resources :jokes
-  resources :questions
+  
+  get 'questions/:id' => 'questions#show'
+  post 'questions/:id' => 'session#answer_question_2'
+  
+  get 'newquiz' => 'attempts#new'
+  post 'newquiz' => 'attempts#create'
+  
+  
+  get 'quizpage' => 'static_pages#quiz_page'
+  post 'quizpage' => 'session#and_one'
+  
+  get 'quizpage2' => 'static_pages#quiz_page2'
+  post 'quizpage2' => 'session#and_two'
+  
+  get 'quizpage3' => 'static_pages#quiz_page3'
+  post 'quizpage3' => 'session#and_three'
+  
+  get 'quizpage4' => 'static_pages#quiz_page4'
+  post 'quizpage4' => 'session#answer_question'
   
 ##  get    'question' => 'questions#show'
   

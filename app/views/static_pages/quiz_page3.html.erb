@@ -1,0 +1,14 @@
+<p>i'm in california dreaming about who we used to be</p>
+<p><%= session[:user_id] %></p>
+<p><%= session[:quiz_grade] %></p>
+<p><%= session[:color] %></p>
+
+<%= form_tag do %>
+<%= radio_button_tag(:color, "red") %>
+<%= label_tag(:color_red, "RED") %>
+<%= radio_button_tag(:color, "white") %>
+<%= label_tag(:color_white, "WHITE") %>
+<%= radio_button_tag(:color, "blue")  %>
+<%= label_tag(:color_blue, "BLUE") %>
+<%= submit_tag("change_color") %>
+<% end %>

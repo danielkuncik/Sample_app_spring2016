@@ -1,0 +1,11 @@
+<p>i'm in california dreaming about who we used to be</p>
+<p><%= session[:user_id] %></p>
+<p><%= session[:quiz_grade] %></p>
+<p><%= session[:color] %></p>
+
+<%= form_for(:session, url: quizpage_path) do |f| %>
+Form content here.
+<%= f.label :color %>
+<%= f.text_field :color %>
+<%= f.submit "change color", class: "btn" %>
+<% end %>
