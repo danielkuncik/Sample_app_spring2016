@@ -1,2 +1,19 @@
-<h1>Jokes#new</h1>
-<p>Find me in app/views/jokes/new.html.erb</p>
+<h1>New Jokes</h1>
+
+
+<div class = "row">
+  <div class= "col-md-6 col-md-offset-3">
+    <%= form_tag do %>
+      <%= label_tag :prompt %>
+      <%= text_field_tag :prompt %>
+      
+      <%= label_tag :punchline %>
+      <%= text_field_tag :punchline %>
+      
+      <%= label_tag :picture %>
+      <%= text_field_tag :picture %>
+      
+      <%= submit_tag "Create Joke", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

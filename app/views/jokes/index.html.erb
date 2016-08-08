@@ -1,0 +1,16 @@
+<ul>
+  <% for i in Joke.ids %>
+  <li>
+  <%= Joke.find(i).prompt %>
+  <%= Joke.find(i).punchline %>
+  <%= image_tag( Joke.find(i).picture ) %>
+  <%= link_to "delete", '/jokes/' + String(i) + '/delete' %>
+  </li>
+  <% end %>
+</ul>
+
+
+<%= image_tag("turtle.jpg") %>
+
+  <%= link_to image_tag("rails.png", alt: "Rails logo"),
+            'http://rubyonrails.org/' %>

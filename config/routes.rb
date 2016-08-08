@@ -20,7 +20,18 @@ Rails.application.routes.draw do
   delete 'logout'  => 'session#destroy'
   
   resources :users
-  resources :jokes
+  
+  get 'jokes/new' => 'jokes#new'
+  post 'jokes/new' => 'jokes#create'
+  
+  get 'jokes/index' => 'jokes#index'
+  
+  
+  get 'jokes/:id' => 'jokes#show'
+  
+  get 'jokes/:id/delete' => 'jokes#killpage'
+  post 'jokes/:id/delete' => 'jokes#destroy'
+  
   
   get 'questions/:id' => 'questions#show'
   post 'questions/:id' => 'session#answer_question_2'

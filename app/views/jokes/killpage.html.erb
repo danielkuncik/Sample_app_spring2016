@@ -1,0 +1,8 @@
+<p>Are you sure you want to delete this joke?</p>
+
+<p> <%= @joke.prompt %> </p>
+<p> <%= @joke.punchline %> </p>
+
+<%= form_tag do %>
+<%= submit_tag "Delete Joke", class: "btn btn-primary" %>
+<% end %>
